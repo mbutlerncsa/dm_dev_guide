@@ -83,9 +83,6 @@ N803
    Argument name should be lowercase.
    See :ref:`style-guide-py-naming`.
 
-Maximum line length
-   See :ref:`style-guide-py-line-length`.
-
 .. _pycodestyle error: http://pep8.readthedocs.io/en/latest/intro.html#error-codes
 
 .. _style-guide-py-flake8:
@@ -124,7 +121,7 @@ Flake8 command line invocation
 
 .. code-block:: bash
 
-   flake8 --ignore=E133,E226,E228,N802,N803 --max-line-length=110 .
+   flake8 --ignore=E133,E226,E228,N802,N803 .
 
 This command lints all Python files in the current directory.
 Alternatively, individual files can be specified in place of ``.``.
@@ -141,7 +138,6 @@ LSST DM Packages may also include a :file:`setup.cfg` file with :pep:`8` excepti
 .. code-block:: ini
 
    [flake8]
-   max-line-length = 110
    ignore = E133, E226, E228, N802, N803
 
 :command:`flake8` can be invoked without arguments when this configuration is present.
@@ -178,7 +174,7 @@ Many :pep:`8` issues in existing code can be fixed with `autopep8`_:
 .. code-block:: bash
 
    autopep8 . --in-place --recursive \
-       --ignore E133,E226,E228,E251,N802,N803 --max-line-length 110
+       --ignore E133,E226,E228,E251,N802,N803
 
 The ``.`` specifies the current directory.
 Together with ``--recursive``, the full tree of Python files will be processed by :command:`autopep8`.
@@ -202,16 +198,6 @@ Style changes must be encapsulated in a distinct commit (see :ref:`git-commit-or
 .. seealso::
 
    :doc:`../docs/py_docs` provides guidelines for the :ref:`layout of docstrings <py-docstring-basics>`.
-
-.. _style-guide-py-line-length:
-
-Line Length MUST be less than or equal to 110 columns
------------------------------------------------------
-
-Limit all lines to a maximum of 110 characters.
-This conforms to the :doc:`cpp_style_guide` (see :ref:`4-6 <style-guide-cpp-4-6>`).
-
-This differs from the `PEP 8 recommendation of 79 characters <https://www.python.org/dev/peps/pep-0008/#id19>`_.
 
 .. _style-guide-py-implied-continuation:
 

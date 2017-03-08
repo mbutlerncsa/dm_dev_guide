@@ -746,9 +746,7 @@ RestructuredText Formatting Conventions
 Text wrapping
 -------------
 
-When writing reST documentation in Python docstrings, documentation lines should be wrapped at lengths of 110 characters for :ref:`consistency with our Python Style Guide <style-guide-py-line-length>`.
-
-.. NOTE: ls.st/rfc-107
+When writing reST documentation in Python docstrings, documentation lines should be wrapped at lengths of 79 characters for consistency with our Python Style Guide.
 
 For reStructuredText documents (e.g., ``.rst`` files), reST doesn't care about line formatting.
 Emacs users, for example, are free to use hard-wrap formatting lines at 72 characters if that helps you write docs.
