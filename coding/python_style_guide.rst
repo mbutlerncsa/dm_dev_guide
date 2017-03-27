@@ -121,7 +121,7 @@ Flake8 command line invocation
 
 .. code-block:: bash
 
-   flake8 --ignore=E133,E226,E228,N802,N803 .
+   flake8 --ignore=E133,E226,E228,E251,N802,N803 .
 
 This command lints all Python files in the current directory.
 Alternatively, individual files can be specified in place of ``.``.
@@ -138,7 +138,7 @@ LSST DM Packages may also include a :file:`setup.cfg` file with :pep:`8` excepti
 .. code-block:: ini
 
    [flake8]
-   ignore = E133, E226, E228, N802, N803
+   ignore = E133, E226, E228, E251, N802, N803
 
 :command:`flake8` can be invoked without arguments when this configuration is present.
 
