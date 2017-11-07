@@ -795,11 +795,17 @@ Following the DPDD, we use ``Err`` to specify error quantities (as standard erro
 
 .. code-block:: cpp
 
-   float xCentroid;        // x position computed by a centroiding algorithm
-   float xCentroidErr;     // Uncertainty of xAstrom
-   float yCentroid;
-   float yCentroidErr;
-   float xyCentroidCov;    // Covariance of x/y centroid
+    // for single measurements
+    float xCentroid;        // x position computed by a centroiding algorithm
+    float xCentroidErr;     // Uncertainty of xAstrom
+    float yCentroid;
+    float yCentroidErr;
+    float xyCentroidCov;    // Covariance of x/y centroid
+
+    // for distributions
+    float fpFluxMean;       // Weighted mean of forced-photometry flux (fpFlux)
+    float fpFluxMeanErr;    // Standard error of fpFluxMean.
+    float fpFluxSigma;      // Standard deviation of the distribution of fpFlux.
  
 Use the full ``Sigma`` since ``Sig`` can easily be misinterpreted as ``Signal``.
 
