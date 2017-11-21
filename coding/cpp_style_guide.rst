@@ -791,7 +791,8 @@ Keeps inputs together.
 3-34. Uncertainty values associated with a variable SHOULD be suffixed by one of ``Err`` or``Cov``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Following the DPDD, we use ``Err`` to specify error quantities (as standard errors), and ``Sigma`` to specify values inherent width of a distribution or function.
+Following the DPDD, we use ``Err`` (not ``Sigma``) to specify error quantities, as standard errors.
+``Sigma`` should be used to specify the inherent width of a distribution or function.
 
 .. code-block:: cpp
 
